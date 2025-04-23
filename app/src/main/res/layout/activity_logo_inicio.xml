@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/logo"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <!-- Logo de la app con ID para animarlo -->
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@mipmap/logo"
+        android:contentDescription="Logo MediSafe"/>
+
+    <!-- Nombre de la app -->
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MediSafe"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#7B1FA2"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Eslogan -->
+    <TextView
+        android:id="@+id/tagline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nunca olvides tu medicación"
+        android:textSize="16sp"
+        android:textColor="#8a9597"
+        android:layout_marginTop="8dp"/>
+
+</LinearLayout>
