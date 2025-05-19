@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">MediSafe</string>
+    <string-array name="tipo_medicamento">
+        <item>Cápsula</item>
+        <item>Tableta</item>
+        <item>Gotas</item>
+        <item>Inyección</item>
+    </string-array>
+
 </resources>
