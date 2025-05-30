@@ -1,10 +1,11 @@
-package com.example.medisafe
+package com.example.medisafe.ui.usuarios
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.medisafe.R
 
 class addMedicine : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

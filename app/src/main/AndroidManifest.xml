@@ -12,14 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MediSafe"
         tools:targetApi="31">
+
         <activity
-            android:name=".addMedicine"
+            android:name=".ui.usuarios.addMedicine"
             android:exported="false" />
         <activity
-            android:name=".Home"
+            android:name=".ui.Home"
             android:exported="false" />
         <activity
-            android:name=".LogIn"
+            android:name=".ui.login.LogIn"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

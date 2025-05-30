@@ -17,7 +17,6 @@
         android:src="@mipmap/logo"
         android:contentDescription="Logo MediSafe"/>
 
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -27,8 +26,8 @@
         android:textColor="@color/white"
         android:layout_marginBottom="20dp" />
 
+    <!-- Campo de usuario (emailInput) -->
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/usernameEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="1dp"
@@ -36,15 +35,15 @@
         android:textColorHint="@color/white">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txtUsario"
+            android:id="@+id/emailInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
             android:textColor="@color/white" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <!-- Campo de contraseña -->
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/passwordEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Contraseña"
@@ -52,13 +51,14 @@
         android:textColorHint="@color/white">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txtContra"
+            android:id="@+id/passwordInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
             android:textColor="@color/white" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <!-- Botón de inicio de sesión -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/loginButton"
         android:layout_width="match_parent"
@@ -68,5 +68,18 @@
         app:cornerRadius="50dp"
         app:backgroundTint="@color/white"
         android:textColor="@color/black"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/registerRedirectButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Crear una cuenta"
+        android:layout_marginTop="12dp"
+        app:cornerRadius="50dp"
+        app:backgroundTint="@android:color/transparent"
+        android:textColor="@color/white"
+        android:strokeColor="@color/white"
+        />
+
 
 </LinearLayout>

@@ -1,17 +1,15 @@
-package com.example.medisafe
+package com.example.medisafe.db.entities
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import androidx.room.TypeConverters
 
 @Entity(tableName = "usuarios")
-@TypeConverters(MedicationConverter::class)
 data class Usuario(
     @PrimaryKey(autoGenerate = true) val id: Int = 0,
-    val nombre: String = "",
-    val contra: String = "",
+    val username: String = "",
+    val password: String = "",
     val email: String = "",
     val telefono: String = "",
     val edad: Int = 0,
-    val medications: List<String> = emptyList()
+
 )

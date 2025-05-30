@@ -1,22 +1,26 @@
-package com.example.medisafe
+package com.example.medisafe.ui.usuarios
 
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
-import com.example.medisafe.databinding.ActivityRegisterBinding
+import com.example.medisafe.databinding.RegistroActivityBinding
+import com.example.medisafe.db.AppDatabase
+import com.example.medisafe.db.UsuarioDao
+import com.example.medisafe.db.entities.Usuario
 import kotlinx.coroutines.launch
 class RegisterActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityRegisterBinding
+    private lateinit var binding: RegistroActivityBinding
     private lateinit var usuarioDao: UsuarioDao
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityRegisterBinding.inflate(layoutInflater)
+        binding = RegistroActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        usuarioDao = AppDatabase.getDatabase(this).usuarioDao()
+        usuarioDao = AppDatabase.getInstance(this).usuarioDao()
+
 
         binding.registerButton.setOnClickListener {
             val nombre = binding.nameInput.text.toString().trim()
@@ -31,12 +35,11 @@ class RegisterActivity : AppCompatActivity() {
             }
 
             val nuevoUsuario = Usuario(
-                nombre = nombre,
+                username = nombre,
                 email = email,
-                contra = pass,
+                password = pass,
                 telefono = telefono,
-                edad = edad,
-                medications = emptyList()
+                edad = edad
             )
 
             lifecycleScope.launch {

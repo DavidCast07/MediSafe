@@ -39,13 +39,15 @@ android {
         viewBinding = true  // Opcional: también puedes habilitar ViewBinding
     }
 }
+val roomVersion = "2.6.1"
 
 dependencies {
     // Room components
-    implementation("androidx.room:room-runtime:2.6.1")
-    implementation("androidx.room:room-ktx:2.6.1")
+    implementation("androidx.room:room-runtime:$roomVersion")
+    implementation("androidx.room:room-ktx:$roomVersion")
+    kapt("androidx.room:room-compiler:$roomVersion")
     implementation(libs.androidx.activity)
-    kapt("androidx.room:room-compiler:2.6.1")
+
 
     // AndroidX Core
     implementation("androidx.core:core-ktx:1.12.0")
